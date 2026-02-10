@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: demo
+  rabbitMq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#    for making acknowledgement as manual
+    listener:
+      simple:
+        acknowledge-mode: manual
+
+mq:
+  message:
+    queue: first.queue
+    exchange: first.exchange
+    key: first.queue.key
+  payment:
+    queue: payment.queue
+    exchange: payment.exchange
+    key: payment.key
+  event:
+    queue: event.queue
+    exchange: event.exchange
+    key: event.key
+  notification:
+    queue: notification.queue
+    exchange: notification.exchange
+    key: notification.key
+
+
